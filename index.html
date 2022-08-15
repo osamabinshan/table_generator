@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="table">
+        <h1>Table</h1>
+        <input type="number" id="tablename" placeholder="Table Name">
+        <input type="number" id="tabletime" placeholder="Table Time"><br><br>
+        <p id="fortable"></p>
+        <button onclick="table()">Table</button><br><br>
+    </div>
+
+    <script>
+
+function table() {
+            let tableName = document.querySelector("#tablename").value;
+            let tableTime = document.querySelector("#tabletime").value;
+            let result = "";
+            for (let index = 0; index < tableTime; index++) {
+                document.getElementById("fortable").innerHTML += `${tableName}  x  ${index + 1} = ${tableName * (index + 1)} <br/>`;
+            }
+        }
+    </script>
+
+</body>
+</html>
